@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         final TextView inlog = findViewById(R.id.login);
-        TextView user = findViewById(R.id.user);
+        //TextView user = findViewById(R.id.user);
         Button logginbutton = findViewById(R.id.logInButton);
 
         logginbutton.setOnClickListener(new View.OnClickListener() {
@@ -33,8 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("===","knapptryckt" + log);
 
                 Intent intent = new Intent(MainActivity.this, SecondaryActivity2.class);
-                intent.putExtra("name", "Daniel"); // Optional
-                intent.putExtra("number", 1); // Optional
+                intent.putExtra("name", log);
                 startActivity(intent);
 
 
