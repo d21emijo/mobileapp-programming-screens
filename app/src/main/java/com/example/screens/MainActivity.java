@@ -2,6 +2,7 @@ package com.example.screens;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -30,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
 
                 String log = inlog.getText().toString();
                 Log.d("===","knapptryckt" + log);
+
+                Intent intent = new Intent(MainActivity.this, SecondaryActivity2.class);
+                intent.putExtra("name", "Daniel"); // Optional
+                intent.putExtra("number", 1); // Optional
+                startActivity(intent);
 
 
 
